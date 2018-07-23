@@ -1,0 +1,22 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="css/random.css">
+	<script src="js/style.js"></script>
+	<title>JB | Random Pairs</title>
+</head>
+
+
+<body>
+	
+	<div class="header">
+		<h1>Random Pairs</h1>
+	</div>
+
+	<div class="box">
+		<form method="post" action="/pair">
+			<div id="box"></div>
+			<button type="button" onclick="addBox()">+</button>
+			<button>Pair</button>
+			<p><%= names%></p>
+		</form>
+	</div>
+</body>
