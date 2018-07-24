@@ -23,6 +23,7 @@ body {
 }
 
 .btn {
+	position: fixed;
 	margin-top: 10px;
 }
 

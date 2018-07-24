@@ -6,16 +6,24 @@ enable :sessions
 
 get '/' do
 	puts "in root params are #{params}"
-	names = session[:names] || []
+	pairnames = session[:names] || []
 
- 	erb :random, locals:{names: names}
+	str = ''
+
+	pairnames.each do |n|
+		n.each do |v|
+			str += v
+			str += ' '
+	 	end
+
+		str += '<br>'
+	end
+
+ 	erb :random, locals:{names: str}
 end
 
 post '/pair' do
 	puts "in pair params are #{params}"
-	names = params[:name] || []
-
-	session[:names] = f_pair(names)
-	p "my names #{f_pair(names)}"
+	session[:names] = f_pair(params['names'])
 	redirect '/'
 end
