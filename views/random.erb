@@ -11,10 +11,13 @@
 		<h1>Random Pairs</h1>
 	</div>
 
-	<div class="box">
-		<form method="post" action="/pair">
+	<div class="boxForm">
+		<form method="post" action="/pair" id="myForm">
+			<div id="preBox"></div>
 			<div id="box"></div><br>
 			<button type="button" onclick="addBox()">+</button>
+			<button type="button" onclick="removeBox()">Remove</button>
+			<button type="button" onclick="clearFunc()">Clear</button>
 			<button>Pair</button>
 			<p><%= names%></p>
 		</form>
